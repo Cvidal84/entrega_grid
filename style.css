@@ -1,0 +1,116 @@
+:root {
+    --primary-color: rgb(236, 236, 236);
+    --secondary-color: rgb(21, 21, 21);
+    --blue-color: #2bc5cd;
+    --orange-color: #ff693d;
+    --border: 2px solid var(--blue-color);
+    --spacing: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Resto del CSS */
+
+  body { /* Super importante en el contenedor general crear las columnas y filas necesarias. */
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /* crea 3 columnas de una fracción de lo que se pueda */
+    grid-template-rows: repeat(3,1fr); /* hacemos lo mismo con filas */
+    width: 100%;
+    height: 100svh;
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+  }
+  header {
+    grid-row: 1/3; /* tenemos que asignar cada elemento a la grilla de esta manera */
+    grid-column: 1/2; /* lo mismo que lo de arriba */
+    display: grid;
+    grid-template-columns: 1, 1fr; /* como dentro de este elemento hay también dos elementos hacemos otro grid como arriba */
+    grid-template-rows: repeat(2,1fr);
+    background-color: #2bc5cd;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  header > h1 {
+    font: 1.5em; 
+    
+  }
+  header > p {
+    font-size: 1.3em;
+    text-align: justify;
+
+  }
+  main {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    grid-template-rows: 1, 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-size: 1.5em;
+    background-color: white;
+    border: solid 2px #2bc5cd;
+  }
+  main > h2 {
+    color: #2bc5cd;
+    align-items: center;
+  }
+  .school {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+    grid-row: 1/2;
+    grid-column: 2/3;
+    
+  }
+  
+  .student {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
+    grid-row: 1/2;
+    grid-column: 3/4;
+    
+  }
+  
+  .time {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
+    grid-row: 2/3;
+    grid-column: 3/4;
+    
+  }
+  
+  .alumni {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+    grid-row: 3/4;
+    grid-column: 1/2;
+    
+  }
+  
+  .alumni,
+  .school,
+  .student,
+  .time {
+    background-size: cover;
+  }
+  footer {
+    grid-row: 3/4;
+    grid-column: 2/4;
+    display: grid;
+    background-color: #ff693d;
+    color: white;
+    padding: 20px;
+  }
+  footer > h3 {
+    font-size: 1.5em;
+
+  }
+  footer > p {
+    font-size: 1.3em;
+
+  }
+  footer > button {
+    border: none;
+    width: 200px;
+    font-size: 1em;
+  }
+
+ 
